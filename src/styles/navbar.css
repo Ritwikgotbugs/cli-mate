@@ -1,0 +1,23 @@
+.NavBar {
+    display: flex;
+    align-items: center;
+}
+
+.climate {
+    display: flex;
+    place-items: center;
+    margin-right: 2rem;
+}
+h1 {
+    padding-left: 1rem;
+}
+
+
+
+.searchInput {
+    border-radius: 12px;
+    max-width: max-content;
+    height: 50px;
+    border: 0;
+    place-items: center;
+}
