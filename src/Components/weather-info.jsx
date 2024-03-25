@@ -1,17 +1,14 @@
 import React from "react";
 import "../styles/weather-info.css";
 
-export function WeatherInfo() {
+export function WeatherInfo({icon, data,title}) {
     return (
         <>
-        <div className="info-container">
-            <div className="row">
-                <div className="weatherInfo"></div>
-                <div className="weatherInfo"></div>
-            </div>
-            <div className="row">
-                <div className="weatherInfo"></div>
-                <div className="weatherInfo"></div>
+        <div className="weatherInfo">
+            <img src={icon} alt="icon" height={60} />
+            <div className="data-box">
+                <h2>{data}</h2>
+                <p>{title}</p>
             </div>
         </div>
         </>

@@ -2,14 +2,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.4);
     border-radius: 20px;
-    width: 125px;
-    height: 125px;
+    width: fit-content;
+    height: fit-content;
     margin: 20px;
 }
 
 .info-container {
-    margin: 20px;
+    margin: 10px;
     display: flex;
+}
+
+h2{
+    font-size: 1.6em;
+    margin: 0;
+}
+p{
+    font-size: 1em;
+    margin: 0;
+
+}
+
+.data-box {
+    margin: 10px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }

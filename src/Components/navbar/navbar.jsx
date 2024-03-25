@@ -10,6 +10,7 @@ export function Navbar() {
         <img className="logo" src={logo} alt="logo" height={80} />
         <h1>CliMate</h1>
       </div>
+      <img src={historyIcon} alt="history" height={40} />
     </nav>
   );
 }
