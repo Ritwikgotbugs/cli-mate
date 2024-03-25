@@ -1,0 +1,15 @@
+.weatherInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    width: 125px;
+    height: 125px;
+    margin: 20px;
+}
+
+.info-container {
+    margin: 20px;
+    display: flex;
+}
