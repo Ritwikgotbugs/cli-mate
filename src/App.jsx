@@ -1,17 +1,18 @@
-import './App.css'
-import { Navbar } from './Components/navbar/navbar.jsx'
-import { WeatherCard } from './Components/weather-display.jsx'
+import React, { useState } from 'react';
+import './App.css';
 import { SearchBar } from "./Components/navbar/all-nav-components/searchBar.jsx";
-import React  from 'react'
+import { Navbar } from './Components/navbar/navbar.jsx';
+import { WeatherCard } from './Components/weather-display.jsx';
 
 
 function App() {
+  const [weatherDescription, setWeatherDescription] = useState("Overcast");
   return (
     <>
     <div className='column'>
       <Navbar />
-      <SearchBar />
-      <WeatherCard />
+      <SearchBar setWeatherDescription={setWeatherDescription} />
+      <WeatherCard weatherDescription={weatherDescription}/>
     </div>
     </>
     

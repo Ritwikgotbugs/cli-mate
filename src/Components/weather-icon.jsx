@@ -57,8 +57,8 @@ export function WeatherIcon({ condition }) {
 
   return (
     <div className="weatherIcon">
-      <h2>{condition}</h2>
       <img src={iconUrl} height={200} alt={condition} />
+      <h2>{condition}</h2>
     </div>
   );
 }

@@ -1,15 +1,15 @@
 .weatherCard {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    width: max-content;
+    width: fit-content;
     opacity: 1;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50px;
     padding-top: 20px;
     padding-left: 50px;
     padding-right: 50px;
-    margin: 10px 20px 0 20px;
+    margin:50px;
 }
 
 
@@ -26,12 +26,11 @@
 
 h1,h2 {
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .description {
-    margin: 20px;
-    font-size: 1rem;
+    font-size: 1.5em;
 }
 #location {
     font-size: 2rem;
@@ -52,10 +51,11 @@ h1,h2 {
     border: 0;
 }
 
+.weatherIcon h2 {
+    font-size: 1.5em;
+    padding: 10px;
+}
 
-div.column {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
+@media screen and (max-width:600px) {
+    
 }

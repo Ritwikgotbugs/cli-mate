@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import "../../../styles/navbar.css";
 
-export let WeatherDescription = "Cloudy";
-export function SearchBar() {
+export function SearchBar({setWeatherDescription}) {
     
     const [search, setSearch] = useState("");
-
     const handleLocation = (e) => {
         setSearch(e.target.value);
     }
@@ -36,11 +34,7 @@ export function SearchBar() {
                 location.innerHTML = `${data.location.name},${data.location.country}`;
                 
                 const weatherText = data.current.condition.text;
-                if (description) {
-                    description.innerHTML = weatherText;
-                    WeatherDescription = weatherText;
-                }
-                console.log(weatherText);
+                setWeatherDescription(weatherText);
                 
             });
         
@@ -61,4 +55,5 @@ export function SearchBar() {
             <button className="searchButton" onClick={searchCity}>Search</button>
         </div>
     );
+
 }

@@ -4,11 +4,10 @@ import precip from "../assets/ppt-icon.png";
 import uv from "../assets/uv.png";
 import wind from "../assets/wind.png";
 import "../styles/weather-display.css";
-import { WeatherDescription } from "./navbar/all-nav-components/searchBar.jsx";
 import { WeatherIcon } from "./weather-icon.jsx";
 import { WeatherInfo } from "./weather-info.jsx";
 
-export function WeatherCard() {
+export function WeatherCard({ weatherDescription }) {
 return (
     <div className="weatherCard">
             <div className="column">
@@ -18,16 +17,16 @@ return (
                     </div>
                     <div className="info-container">
                             <div className="row">
-                                    <WeatherInfo icon={humidity} data="0.0%" title="Humidity" id={'humidity'}/>
-                                    <WeatherInfo icon={wind} data="0.0%" title="Windspeed" id={'wind'}/>
+                                    <WeatherInfo icon={humidity} data="0%" title="Humidity" id={'humidity'}/>
+                                    <WeatherInfo icon={wind} data="0 km/h" title="Windspeed" id={'wind'}/>
                             </div>
                             <div className="row">
-                            <WeatherInfo icon={uv} data="0.0%" title="UV Index" id={'uv'}/>
-                            <WeatherInfo icon={precip} data="0.0%" title="Precipitation" id={'precip'}/>
+                            <WeatherInfo icon={uv} data="0" title="UV Index" id={'uv'}/>
+                            <WeatherInfo icon={precip} data="0 mm" title="Precipitation" id={'precip'}/>
                             </div>
                     </div>
             </div>
-            <WeatherIcon condition={WeatherDescription}/>
+            <WeatherIcon condition={weatherDescription}/>
     </div>
 );
 }
