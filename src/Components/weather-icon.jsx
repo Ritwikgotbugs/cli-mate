@@ -1,7 +1,6 @@
 import React from "react";
 import "../styles/weather-display.css";
 
-// Import all weather icons
 import sunnyIcon from "../assets/sunny.png";
 import clearIcon from "../assets/clear.png";
 import partialCloudyIcon from "../assets/partial-cloudy.png";
