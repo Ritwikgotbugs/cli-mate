@@ -57,5 +57,20 @@ h1,h2 {
 }
 
 @media screen and (max-width:600px) {
+    .weatherCard {
+        flex-direction: column;
+        width: 80%;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 700px) and (min-width:600px){
+    .weatherCard {
+        flex-direction: row;
+        width: 90%;
+        padding: 20px;
+    }
     
 }

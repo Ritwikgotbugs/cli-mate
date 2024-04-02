@@ -71,3 +71,35 @@ button:hover {
 .history-icon {
     cursor: pointer;
 }
+
+@media screen and (max-width:600px) {
+    .searchbar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .searchInput {
+        width: 50%;
+    }
+
+    .navbar {
+        margin-bottom: 30px;
+        margin-right: 20px;
+        margin-top: 20px;
+        
+    }
+
+    .logo {
+        height: 50px;
+        width: 50px;
+        margin-left: 20px;
+    }
+    
+    h1 {
+        font-size: 0.5rem;
+        padding-left: 10px;
+    }
+    .history-icon {
+        height: 30px;
+    }
+}
