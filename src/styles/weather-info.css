@@ -1,8 +1,17 @@
+@font-face {
+    font-family: 'kRegularFont';
+    src: url('../assets/Outfit/fonts/Outfit-Regular.ttf');
+}
+@font-face {
+    font-family: 'kBoldFont';
+    src: url('../assets/Outfit/fonts/Outfit-Bold.ttf');
+}
+
+
 .weatherInfo {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
     width: fit-content;
     height: fit-content;
     margin: 20px;
@@ -14,19 +23,27 @@
 }
 
 h2{
-    font-size: 1.6em;
+    font-size: 1.5em;
     margin: 0;
 }
 p{
     font-size: 1em;
     margin: 0;
-
 }
 
-.data-box {
+h2,p {
+    font-family: kRegularFont;
+}
+
+div.data-box {
     margin: 10px;
     justify-content: center;
     display: flex;
     align-items: center;
     flex-direction: column;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: kboldFont;
 }
+
+
