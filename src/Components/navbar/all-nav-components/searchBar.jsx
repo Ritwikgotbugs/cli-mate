@@ -11,7 +11,7 @@ export function SearchBar({setWeatherDescription}) {
     const searchCity = () => {
         let searchQuery = search;
         let api_key= "4efd5206eff842dabe175946231612";
-        let url= `https://api.weatherapi.com/v1/current.json?key=${api_key}&q=${searchQuery}&aqi=no`;
+        let url= `http://api.weatherapi.com/v1/current.json?key=${api_key}&q=${searchQuery}&aqi=no`;
         try {
             fetch(url)
             .then((response) => response.json())
