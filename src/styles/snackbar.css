@@ -1,0 +1,31 @@
+.snackbar {
+    visibility: hidden; 
+    min-width: 250px; 
+    margin-left: -125px; 
+    background-color: #212121; 
+    color: #fff; 
+    text-align: center; 
+    padding: 16px;
+    position: fixed; 
+    z-index: 4; 
+    left: 50%; 
+    bottom: 30px; 
+    border-radius: 30px;
+    opacity: 1;
+    font-family: kRegularFont;
+}
+
+.snackbar.show {
+    visibility: visible;
+}
+
+.closeButton {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
