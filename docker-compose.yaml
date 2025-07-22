@@ -5,3 +5,58 @@ services:
     ports:
       - "3000:3000"
     restart: unless-stopped
+
+  # Jenkins CI/CD server
+  jenkins:
+    image: jenkins/jenkins:lts
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - jenkins_home:/var/jenkins_home
+    restart: unless-stopped
+
+  # Prometheus monitoring
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    restart: unless-stopped
+
+  # Grafana dashboard
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3001:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - grafana_data:/var/lib/grafana
+    depends_on:
+      - prometheus
+    restart: unless-stopped
+
+  # Trivy vulnerability scanner (runs as a service for demo; usually CLI)
+  trivy:
+    image: aquasec/trivy:latest
+    entrypoint: tail -f /dev/null # Keeps container running
+    restart: unless-stopped
+
+  # Docker-in-Docker (for Jenkins builds, optional)
+  dind:
+    image: docker:dind
+    privileged: true
+    ports:
+      - "2376:2376"
+    environment:
+      - DOCKER_TLS_CERTDIR=""
+    restart: unless-stopped
+
+  # Kubernetes: Not typically run in Compose. Use kind/k3d/minikube for local clusters.
+  # See https://kind.sigs.k8s.io/ or https://k3d.io/
+
+volumes:
+  jenkins_home:
+  grafana_data:
